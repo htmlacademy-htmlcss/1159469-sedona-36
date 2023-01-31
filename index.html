@@ -38,6 +38,7 @@
         </ul>
       </nav>
     </header>
+
     <main class="main-index">
       <div class="main-index__wrapper">
         <h1 class="visually-hidden">Sedona - поиск гостиниц для отдыха в Седоне.</h1>
@@ -51,12 +52,12 @@
             <p class="features__head__text">Рассмотрим причины, по которым Седона круче, чем Гранд-Каньон!</p>
           </div>
           <ul class="features__list">
-            <li class="features__item">
-              <h3 class="features__title">Настоящий городок</h3>
-              <p class="features__description">Седона — не аттракцион для туристов, там течёт своя жизнь</p>
-            </li>
             <li class="features__item features__item-picture">
-              <img src="#" alt="Атмосфера курортного городка.">
+              <div class="features__item__wrapper">
+                <h3 class="features__title">Настоящий городок</h3>
+                <p class="features__description">Седона — не аттракцион для туристов, там течёт своя жизнь</p>
+              </div>
+              <img class="features__image" src="#" alt="Атмосфера курортного городка.">
             </li>
             <li class="features__item">
               <h3 class="features__title">Небольшая площадь</h3>
@@ -71,11 +72,11 @@
               <p class="features__description">Большинство едет в Гранд Каньон и толпится там</p>
             </li>
             <li class="features__item features__item-picture">
-              <img src="#" alt="Мост дьявола.">
-            </li>
-            <li class="features__item">
-              <h3 class="features__title">Там есть мост дьявола</h3>
-              <p class="features__description">Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
+              <img class="features__image" src="#" alt="Мост дьявола.">
+              <div class="features__item__wrapper">
+                <h3 class="features__title">Там есть мост дьявола</h3>
+                <p class="features__description">Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
+              </div>
             </li>
           </ul>
         </section>
@@ -107,13 +108,14 @@
         <section class="subscription">
           <h2 class="subscription__title">Подпишитесь на рассылку</h2>
           <p class="subscription__description">Только полезная информация и никакого спама, честное бойскаутское!</p>
-          <form class="subscription__form" action="#" method="get">
+          <form class="subscription__form" action="https://echo.htmlacademy.ru/" method="get">
             <input class="subscription__email" type="email" placeholder="Ваш e-mail">
             <button class="subscription__button" type="submit">Подписаться</button>
           </form>
         </section>
       </div>
     </main>
+
     <footer class="footer">
       <div class="footer__social social">
         <ul class="socail__list">
