@@ -16,7 +16,11 @@
 
 :root {
   --colorWhite: #ffffff;
+  --colorConcrete: #f2f2f2;
   --colorBlack: #000000;
+  --colorMineShaft: #333333;
+  --colorMercury: #e5e5e5;
+  --colorSilver: #e6e6e6;
   --colorBgBasic: #81b3d3;
   --colorBgDefault: #7ac1ec;
   --colorButtonPrimary: #756157;
@@ -49,6 +53,8 @@ body {
   overflow: hidden;
 }
 
+/* ===== Index ===== */
+
 .navigation__list {
   margin: 0;
   padding: 0;
@@ -77,7 +83,7 @@ body {
   background-color: var(--colorBgDefault);
   background-image: url('../image/index/hero-background.jpg');
   background-repeat: no-repeat;
-  background-size: 100% auto;
+  background-size: cover;
   text-align: center;
 }
 
@@ -195,12 +201,17 @@ body {
 }
 
 .subscription {
+  color: var(--colorBlack);
+  background-color: var(--colorWhite);
+  text-align: center;
+}
+
+.subscription--background {
   color: var(--colorWhite);
   background-color: var(--colorBgDefault);
   background-image: url("/image/index/subscribe-background.jpg");
   background-repeat: no-repeat;
-  background-size: 100% auto;
-  text-align: center;
+  background-size: cover;
 }
 
 .subscription__title {
@@ -240,6 +251,200 @@ body {
   font-size: 40px;
   line-height: 40px;
   font-style: normal;
+}
+
+/* ===== Catalog ===== */
+
+.inner-head-wrapper {
+  color: var(--colorWhite);
+  background-color: var(--colorBgDefault);
+  background-image: url("/image/catalog/filter-background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.inner-header__title {
+  margin: 0;
+  font-size: 60px;
+  line-height: 76px;
+}
+
+.breadcrumbs__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.breadcrumbs__link {
+  font-size: 16px;
+  line-height: 21px;
+  color: var(--colorWhite);
+  text-decoration: none;
+}
+
+.form__group {
+  padding: 0;
+  border: none;
+}
+
+.form__group__title {
+  padding: 0;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.form__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.control__text {
+  font-size: 18px;
+  line-height: 23px;
+}
+
+.form__button {
+  font-size: 16px;
+  line-height: 20px;
+  padding: 8px 50px;
+}
+
+.sorting__title {
+  display: block;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 36px;
+  text-transform: uppercase;
+}
+
+.sorting__select {
+  padding: 14px 20px;
+  font-size: 18px;
+  line-height: 21px;
+  color: var(--colorMineShaft);
+  border: 2px solid var(--colorMercury);
+  border-radius: 4px;
+}
+
+.sorting__control {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.sorting__control__button {
+  display: block;
+  width: 48px;
+  height: 48px;
+  border: 2px solid var(--colorMercury);
+  border-radius: 4px;
+}
+
+.sorting__control__button--current {
+  border-color: var(--colorBlack);
+}
+
+.catalog__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.hotel-card {
+  width: 340px;
+  border: 1px solid var(--colorSilver);
+  border-radius: 4px;
+}
+
+.hotel-card__title {
+  margin: 0;
+  font-size: 24px;
+  line-height: 28px;
+}
+
+.hotel-card__type {
+  font-size: 18px;
+  line-height: 21px;
+}
+
+.hotel-card__price {
+  font-size: 18px;
+  line-height: 21px;
+}
+
+.hotel-card__link {
+  padding: 8px 26px;
+  font-size: 16px;
+  line-height: 20px;
+  text-decoration: none;
+}
+
+.hotel-card__button {
+  padding: 8px 20px;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.hotel-card__rating-value {
+  display: block;
+  width: 140px;
+  padding: 8px 20px;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  background-color: var(--colorConcrete);
+  border-radius: 4px;
+}
+
+
+.rating {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.rating__star {
+  display: block;
+  width: 18px;
+  height: 17px;
+  background-image: url("/image/catalog/rating-star.svg");
+  background-repeat: no-repeat;
+}
+
+.rating__star:not(:last-child) {
+  margin-right: 6px;
+}
+
+.pagination__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.pagination__link {
+  display: block;
+  width: 60px;
+  height: 60px;
+  padding: 12px 24px;
+  font-size: 20px;
+  line-height: 36px;
+  font-weight: 700;
+  color: var(--colorWhite);
+  background-color: var(--colorBgBasic);
+  text-decoration: none;
+  text-align: center;
+  border-radius: 4px;
+}
+
+.pagination__link--current {
+  color: var(--colorBlack);
+  background-color: var(--colorConcrete);
+}
+
+.pagination__link--light {
+  color: var(--colorBlack);
+  background-color: transparent;
 }
 
 /* ===== Buttons ===== */
