@@ -410,6 +410,7 @@ body {
   height: 17px;
   background-image: url("/image/catalog/rating-star.svg");
   background-repeat: no-repeat;
+  background-size: 100% auto;
 }
 
 .rating__star:not(:last-child) {
