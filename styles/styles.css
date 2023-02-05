@@ -140,11 +140,16 @@ body {
   background-image: url('../image/index/hero-background.jpg');
   background-repeat: no-repeat;
   background-size: cover;
-  text-align: center;
+}
+
+.hero__image {
+  display: block;
+  margin: 0 auto;
 }
 
 .features__head-title {
-  margin: 0;
+  width: 620px;
+  margin: 0 auto;
   font-size: 30px;
   line-height: 36px;
   text-transform: uppercase;
@@ -152,25 +157,47 @@ body {
 }
 
 .features__head-text {
-  margin: 0;
+  width: 651px;
+  margin: 0 auto;
   font-size: 22px;
   line-height: 26px;
   text-align: center;
 }
 
 .features__list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
   margin: 0;
   padding: 0;
   list-style-type: none;
 }
 
 .features__item {
+  /* align-items: center; */
+}
+
+.features__item--picture {
+  grid-column: span 3;
+  display: flex;
+}
+
+.features__item--text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 384px;
+  padding: 0 85px;
   text-align: center;
 }
 
 .features__item__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 85px;
   background-color: var(--colorBgBasic);
   color: var(--colorWhite);
+  text-align: center;
 }
 
 .features__title {
@@ -192,7 +219,8 @@ body {
 }
 
 .services__head-title {
-  margin: 0;
+  width: 505px;
+  margin: 0 auto;
   font-size: 30px;
   line-height: 36px;
   text-transform: uppercase;
@@ -200,7 +228,8 @@ body {
 }
 
 .services__head-text {
-  margin: 0;
+  width: 490px;
+  margin: 0 auto;
   font-size: 22px;
   line-height: 26px;
   text-align: center;
@@ -210,9 +239,17 @@ body {
   margin: 0;
   padding: 0;
   list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .services__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 400px;
+  min-height: 384px;
+  padding: 0 85px;
   text-align: center;
 }
 
@@ -241,7 +278,8 @@ body {
 }
 
 .promo__text {
-  margin: 0;
+  width: 592px;
+  margin: 0 auto;
   font-size: 22px;
   line-height: 26px;
 }
@@ -278,7 +316,8 @@ body {
 }
 
 .subscription__description {
-  margin: 0;
+  width: 475px;
+  margin: 0 auto;
   font-size: 22px;
   line-height: 26px;
 }
