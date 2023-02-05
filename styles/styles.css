@@ -68,10 +68,48 @@ body {
   min-height: 100%;
 }
 
+.main-header__wrapper {
+  padding: 0 70px;
+  display: flex;
+}
+
+.navigation__logo-link {
+  margin-right: 28px;
+}
+
+.navigation__logo {
+  display: block;
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-grow: 1;
+}
+
 .navigation__list {
+  display: flex;
+  align-items: center;
   margin: 0;
   padding: 0;
   list-style-type: none;
+}
+
+.navigation__page {
+  max-width: 450px;
+}
+
+.navigation__page .navigation__link {
+  padding: 20px 16px;
+}
+
+.navigation__user {
+  max-width: 300px;
+}
+
+.navigation__user .navigation__link {
+  padding: 20px 12px;
 }
 
 .navigation__link {
@@ -85,6 +123,7 @@ body {
 .navigation__link-button {
   display: block;
   width: 160px;
+  margin-left: 20px;
   padding: 8px 34px;
   font-size: 16px;
   line-height: 20px;
