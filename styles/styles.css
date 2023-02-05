@@ -334,10 +334,26 @@ body {
   line-height: 36px;
 }
 
+.footer__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 70px;
+}
+
 .social__list {
+  width: 142px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
   margin: 0;
   padding: 0;
   list-style-type: none;
+}
+
+.social__link {
+  padding: 12px 10px;
 }
 
 .contacts__phone {
