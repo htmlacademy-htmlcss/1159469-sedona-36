@@ -94,6 +94,7 @@ body {
   justify-content: space-between;
   align-items: center;
   flex-grow: 1;
+  padding-bottom: 6px;
 }
 
 .navigation__list {
@@ -421,7 +422,7 @@ body {
 /* ===== Catalog ===== */
 
 .inner-head-wrapper {
-  padding: 0 70px;
+  padding: 35px 70px 70px;
   color: var(--colorWhite);
   background-color: var(--colorBgDefault);
   background-image: url("/image/catalog/filter-background.jpg");
@@ -431,6 +432,7 @@ body {
 
 .inner-header__title {
   margin: 0;
+  margin-bottom: 8px;
   font-size: 60px;
   line-height: 76px;
 }
@@ -439,6 +441,7 @@ body {
   display: flex;
   align-items: center;
   margin: 0;
+  margin-bottom: 40px;
   padding: 0;
   list-style-type: none;
 }
@@ -472,6 +475,7 @@ body {
 }
 
 .form__group__title {
+  margin-bottom: 32px;
   padding: 0;
   font-size: 20px;
   line-height: 24px;
@@ -481,6 +485,10 @@ body {
   margin: 0;
   padding: 0;
   list-style-type: none;
+}
+
+.form__list__item:not(:last-child) {
+  margin-bottom: 14px;
 }
 
 .control__text {
@@ -501,13 +509,18 @@ body {
   padding: 8px 50px;
 }
 
-.catalog__sorting {
-  padding: 0 70px;
+.form__button:not(:last-child) {
+  margin-bottom: 32px;
+}
+
+.catalog__wrapper {
+  padding: 50px 70px 60px;
 }
 
 .sorting {
   display: flex;
   align-items: center;
+  margin-bottom: 40px;
 }
 
 .sorting__title {
@@ -520,7 +533,7 @@ body {
 }
 
 .sorting__select {
-  padding: 14px 20px;
+  padding: 12px 20px;
   font-size: 18px;
   line-height: 21px;
   color: var(--colorMineShaft);
@@ -552,7 +565,8 @@ body {
 
 .catalog__list {
   margin: 0;
-  padding: 0 70px;
+  padding: 0;
+  margin-bottom: 80px;
   list-style-type: none;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -623,10 +637,6 @@ body {
 
 .rating__star:not(:last-child) {
   margin-right: 6px;
-}
-
-.catalog__pagination {
-  padding: 0 70px;
 }
 
 .pagination__list {
