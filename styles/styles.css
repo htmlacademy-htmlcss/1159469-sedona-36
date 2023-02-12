@@ -16,18 +16,26 @@
 
 :root {
   --colorWhite: #ffffff;
+  --colorWhiteOpacity: rgba(255, 255, 255, 0.3);
   --colorConcrete: #f2f2f2;
   --colorBlack: #000000;
+  --colorBlackOpacity: rgb(0, 0, 0, 0.3);
   --colorMineShaft: #333333;
   --colorMercury: #e5e5e5;
   --colorSilver: #e6e6e6;
   --colorBgBasic: #81b3d3;
   --colorBgDefault: #7ac1ec;
   --colorButtonPrimary: #756157;
+  --colorButtonPrimaryHover: #615048;
+  --colorButtonSecondaryHover: #68a2ca;
   --colorButtonSelect: #7db54f;
+  --colorButtonSelectHover: #6c9e42;
+  --colorButtonLightFocus: #83b3d3;
   --colorBgFeatures: rgba(131, 179, 211, 0.12);
   --colorBgFeaturesSecondary: rgba(131, 179, 211, 0.2);
-  --colorBgServices: rgba(0, 0, 0, 0.2)
+  --colorBgServices: rgba(0, 0, 0, 0.2);
+  --colorLinkCurrent: #756257;
+  --colorSelectActive: #3F5E72;
 }
 
 *, *::before, *::after {
@@ -85,6 +93,14 @@ body {
   margin-right: 28px;
 }
 
+.navigation__logo-link:hover {
+  opacity: 0.8;
+}
+
+.navigation__logo-link:active {
+  opacity: 0.6;
+}
+
 .navigation__logo {
   display: block;
 }
@@ -119,15 +135,40 @@ body {
 }
 
 .navigation__user .navigation__link {
-  padding: 20px 12px;
+  padding: 18px 12px;
 }
 
 .navigation__link {
+  position: relative;
   font-size: 20px;
   font-weight: 700;
   line-height: 24px;
   color: var(--colorBlack);
   text-decoration: none;
+}
+
+.navigation__link:hover {
+  color: var(--colorButtonPrimary);
+}
+
+.navigation__link--current::after {
+  position: absolute;
+  padding: 0 16px;
+  content: "";
+  height: 2px;
+  bottom: 1px;
+  left: 16px;
+  right: 16px;
+  background-color: var(--colorLinkCurrent);
+}
+
+.navigation__link:hover .navigation__link__icon {
+  fill: var(--colorButtonPrimary);
+}
+
+.navigation__link:active .navigation__link__icon {
+  fill: var(--colorButtonPrimary);
+  opacity: 0.3;
 }
 
 .navigation__link-button {
@@ -376,6 +417,20 @@ body {
   background-color: var(--colorConcrete);
 }
 
+.subscription__email:hover {
+  background-color: var(--colorSilver);
+}
+
+.subscription__email:focus {
+  background-color: var(--colorSilver);
+  outline: 3px solid var(--colorButtonLightFocus);
+}
+
+.subscription__email:not(:placeholder-shown) {
+  box-shadow: inset 0 0 0 2px var(--colorBlack);
+  outline: none;
+}
+
 .subscription__button {
   padding: 8px 50px;
   font-size: 20px;
@@ -408,7 +463,31 @@ body {
 }
 
 .social__link {
+  display: block;
+  width: 47px;
+  height: 40px;
   padding: 12px 10px;
+  position: relative;
+}
+
+.social__link:hover .social__icon{
+  fill: var(--colorButtonSecondaryHover);
+}
+
+.social__link:focus .social__icon{
+  fill: var(--colorButtonSecondaryHover);
+  outline: none;
+}
+
+.social__link:active .social__icon{
+  opacity: 0.3;
+}
+
+.social__icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .contacts__phone {
@@ -419,8 +498,34 @@ body {
   font-style: normal;
 }
 
+.contacts__phone:hover {
+  color: var(--colorButtonPrimary);
+}
+
+.contacts__phone:focus {
+  color: var(--colorButtonPrimary);
+}
+
+.contacts__phone:active {
+  color: var(--colorButtonPrimary);
+  opacity: 0.3;
+}
+
 .copyright__link {
   display: block;
+}
+
+.copyright__icon:hover {
+  fill: var(--colorButtonPrimary);
+}
+
+.copyright__icon:focus {
+  fill: var(--colorButtonPrimary);
+}
+
+.copyright__icon:active {
+  fill: var(--colorButtonPrimary);
+  opacity: 0.3;
 }
 
 /* ===== Catalog ===== */
@@ -460,6 +565,18 @@ body {
   line-height: 21px;
   color: var(--colorWhite);
   text-decoration: none;
+}
+
+.breadcrumbs__link:hover {
+  opacity: 0.6;
+}
+
+.breadcrumbs__link:focus {
+  outline: 3px solid var(--colorButtonLightFocus);
+}
+
+.breadcrumbs__link:active {
+  opacity: 0.3;
 }
 
 .filter__form {
@@ -548,6 +665,26 @@ body {
   color: var(--colorMineShaft);
   border: 2px solid var(--colorMercury);
   border-radius: 4px;
+  cursor: pointer;
+  appearance: none;
+}
+
+.sorting__select:hover {
+  border-color: var(--colorButtonSecondaryHover);
+}
+
+.sorting__select:focus {
+  border-color: var(--colorButtonSecondaryHover);
+  outline: none;
+}
+
+.sorting__select:active {
+  border-color: var(--colorSelectActive);
+}
+
+.sorting__select:disabled {
+  border-color: var(--colorBlackOpacity);
+  color: var(--colorBlackOpacity);
 }
 
 .sorting__control {
@@ -566,6 +703,19 @@ body {
   height: 48px;
   border: 2px solid var(--colorMercury);
   border-radius: 4px;
+}
+
+.sorting__control__button:hover {
+  border-color: var(--colorBlack);
+}
+
+.sorting__control__button:focus {
+  border-color: var(--colorButtonSecondaryHover);
+  outline: none;
+}
+
+.sorting__control__button:active {
+  border-color: var(--colorBlack);
 }
 
 .sorting__control__button--current {
@@ -687,12 +837,54 @@ body {
   border-radius: 4px;
 }
 
+.pagination__link:hover {
+  background-color: var(--colorButtonSecondaryHover);
+}
+
+.pagination__link:focus {
+  background-color: var(--colorButtonSecondaryHover);
+}
+
+.pagination__link:active {
+  color: var(--colorWhiteOpacity);
+}
+
 .pagination__link--current {
   color: var(--colorBlack);
   background-color: var(--colorConcrete);
 }
 
+.pagination__link--current:hover{
+  color: var(--colorBlack);
+  background-color: var(--colorConcrete);
+}
+
+.pagination__link--current:focus {
+  color: var(--colorBlack);
+  background-color: var(--colorConcrete);
+}
+
+.pagination__link--current:active {
+  color: var(--colorBlack);
+  background-color: var(--colorConcrete);
+}
+
 .pagination__link--light {
+  color: var(--colorBlack);
+  background-color: transparent;
+}
+
+.pagination__link--light:hover {
+  color: var(--colorBlack);
+  background-color: transparent;
+}
+
+.pagination__link--light:focus {
+  color: var(--colorBlack);
+  background-color: transparent;
+}
+
+.pagination__link--light:active {
   color: var(--colorBlack);
   background-color: transparent;
 }
@@ -709,18 +901,70 @@ body {
   cursor: pointer;
 }
 
+.button:disabled {
+  background-color: var(--colorMercury);
+}
+
 .button--primary {
   background-color: var(--colorButtonPrimary);
+}
+
+.button--primary:hover {
+  background-color: var(--colorButtonPrimaryHover);
+}
+
+.button--primary:focus {
+  background-color: var(--colorButtonPrimaryHover);
+}
+
+.button--primary:active {
+  color: var(--colorWhiteOpacity);
 }
 
 .button--secondary {
   background-color: var(--colorBgBasic);
 }
 
+.button--secondary:hover {
+  background-color: var(--colorButtonSecondaryHover);
+}
+
+.button--secondary:focus {
+  background-color: var(--colorButtonSecondaryHover);
+}
+
+.button--secondary:active {
+  color: var(--colorWhiteOpacity);
+}
+
 .button--selected {
   background-color: var(--colorButtonSelect);
 }
 
+.button--selected:hover {
+  background-color: var(--colorButtonSelectHover);
+}
+
+.button--selected:focus {
+  background-color: var(--colorButtonSelectHover);
+}
+
+.button--selected:active {
+  color: var(--colorWhiteOpacity);
+}
+
 .button--light {
   background-color: transparent;
+}
+
+.button--light:hover {
+  opacity: 0.6;
+}
+
+.button--light:focus {
+  outline: 3px solid var(--colorButtonLightFocus);
+}
+
+.button--light:active {
+  opacity: 0.3;
 }
