@@ -186,22 +186,48 @@
           <section class="modal__content">
             <h2 class="modal__title">Поиск гостиницы в Седоне</h2>
             <form class="modal__form" action="https://echo.htmlacademy.ru/" method="post">
-              <p class="modal__form__group">
+              <div class="modal__form__group modal__form__group--wide">
                 <label class="modal__form__label" for="date-arrive">Дата Заезда:</label>
-                <input class="modal__form__input" id="date-arrive" type="text" name="arrival-date" value="">
-              </p>
-              <p class="modal__form__group">
+                <input class="modal__form__input modal__form__input--date" id="date-arrive" type="text" name="arrival-date" placeholder="27 апреля 2020">
+                <span class="modal__form__message modal__form__message--error">Мы не можем отправить вас в прошлое.</span>
+              </div>
+              <div class="modal__form__group modal__form__group--wide">
                 <label class="modal__form__label" for="date-depart">Дата Выезда:</label>
-                <input class="modal__form__input" id="date-depart" type="text" name="depart-date" value="">
-              </p>
-              <p class="modal__form__group">
+                <input class="modal__form__input modal__form__input--date" id="date-depart" type="text" name="depart-date" placeholder="1 сентября 2023">
+                <span class="modal__form__message">На эти даты есть свободные номера. Пока есть.</span>
+              </div>
+              <div class="modal__form__group">
                 <label class="modal__form__label" for="adults">Взрослые:</label>
-                <input class="modal__form__input" id="adults" type="text" name="amount-adults" value="">
-              </p>
-              <p class="modal__form__group">
+                <div class="modal__form__input-wrapper">
+                  <button class="input-button input-button--decrease" type="button">
+                    <svg class="input-button__icon" aria-hidden="true" focusable="false" width="14" height="2" viewBox="0 0 14 2" fill="#756157" fill-opacity="0.3" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M0 0L0 2L14 2V0L0 0Z"/>
+                    </svg>
+                  </button>
+                  <input class="modal__form__input modal__form__input--amount" id="adults" type="number" name="amount-adults" placeholder="2">
+                  <button class="input-button input-button--increase" type="button">
+                    <svg class="input-button__icon" aria-hidden="true" focusable="false" width="14" height="14" viewBox="0 0 14 14" fill="#756157" fill-opacity="0.3" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M14 6H8V0H6V6H0V8H6V14H8V8H14V6Z"/>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <div class="modal__form__group">
                 <label class="modal__form__label" for="children">Дети:</label>
-                <input class="modal__form__input" id="children" type="text" name="amount-children" value="">
-              </p>
+                <div class="modal__form__input-wrapper">
+                  <button class="input-button input-button--decrease" type="button">
+                    <svg class="input-button__icon" aria-hidden="true" focusable="false" width="14" height="2" viewBox="0 0 14 2" fill="#756157" fill-opacity="0.3" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M0 0L0 2L14 2V0L0 0Z"/>
+                    </svg>
+                  </button>
+                  <input class="modal__form__input modal__form__input--amount" id="children" type="number" name="amount-children" placeholder="2">
+                  <button class="input-button input-button--increase" type="button">
+                    <svg class="input-button__icon" aria-hidden="true" focusable="false" width="14" height="14" viewBox="0 0 14 14" fill="#756157" fill-opacity="0.3" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M14 6H8V0H6V6H0V8H6V14H8V8H14V6Z"/>
+                    </svg>
+                  </button>
+                </div>
+              </div>
             <button class="modal__form__button button button--secondary" type="submit">Найти</button>
             </form>
           </section>
