@@ -422,7 +422,7 @@ body {
   line-height: 26px;
 }
 
-.promo__link {
+.promo__button {
   display: block;
   margin: 0 auto;
   width: 376px;
@@ -1196,9 +1196,9 @@ body {
   z-index: 10;
 }
 
-/* .modal__container--close {
+.modal__container--close {
   display: none;
-} */
+}
 
 .modal {
   position: relative;
