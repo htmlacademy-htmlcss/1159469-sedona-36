@@ -1188,7 +1188,6 @@ body {
   top: 0;
   left: 0;
   display: flex;
-  /* justify-content: center; */
   align-items: center;
   width: 100%;
   height: 100%;
@@ -1208,7 +1207,7 @@ body {
   padding: 64px 70px;
   color: var(--colorBlack);
   background-color: var(--colorWhite);
-  box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.15);
+  box-shadow: 0 0 50px 25px rgba(0, 0, 0, 0.15);
   border-radius: 30px;
 }
 
@@ -1394,6 +1393,63 @@ body {
   padding: 18px 20px;
   font-size: 20px;
   line-height: 24px;
+}
+
+/* ===== Tooltip ===== */
+
+.modal__form__label-wrapper {
+  display: flex;
+}
+
+.modal__form__label-wrapper .modal__form__label {
+  margin-right: 10px;
+}
+
+.tooltip {
+  position: relative;
+}
+
+.tooltip__button {
+  padding: 0;
+  border: none;
+  background-color: transparent;
+}
+
+.tooltip__button:hover + .tooltip__text {
+  display: block;
+}
+
+.tooltip__text {
+  position: absolute;
+  display: none;
+  top: 41px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 256px;
+  min-height: 143px;
+  padding: 15px 18px 18px 22px;
+  font-size: 16px;
+  line-height: 20px;
+  color: var(--colorWhite);
+  background-color: var(--colorMineShaft);
+  border-radius: 10px;
+  box-shadow: 0 0 30px 15px var(--colorBlackOpacity);
+  z-index: 1;
+
+}
+
+.tooltip__text::after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 0;
+  top: -9px;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 0 solid transparent;
+  border-right-width: 9px;
+  border-left-width: 9px;
+  border-bottom: 9px solid var(--colorMineShaft);
 }
 
 /* ===== Buttons ===== */
