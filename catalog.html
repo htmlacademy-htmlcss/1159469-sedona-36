@@ -127,7 +127,30 @@
               </fieldset>
               <fieldset class="form__group">
                 <legend class="form__group__title">Стоимость, &#8381;:</legend>
-                <div class="range-slider"></div>
+                <div class="form__group__range range">
+                  <div class="range__inputs">
+                    <div class="range__input-wrapper">
+                      <label class="range__label" for="min-price">от</label>
+                      <input class="range__input range__input--left" id="min-price" type="number" name="min-price" placeholder="0">
+                    </div>
+                    <div class="range__input-wrapper">
+                      <label class="range__label" for="max-price">до</label>
+                      <input class="range__input range__input--right" id="max-price" type="number" name="max-price" placeholder="9000">
+                    </div>
+                  </div>
+                  <div class="range__scale">
+                    <div class="range__bar">
+                      <button class="range__toggle range__toggle--min" type="button">
+                        <span class="visually-hidden">Изменить минимальную цену.</span>
+                      </button>
+                      <button class="range__toggle range__toggle--max" type="button">
+                        <span class="visually-hidden">Изменить максимальную цену.</span>
+                      </button>
+                    </div>
+
+                  </div>
+
+                </div>
               </fieldset>
               <div class="form__button__wrapper">
                 <button class="form__button button button--secondary" type="submit">Применить</button>

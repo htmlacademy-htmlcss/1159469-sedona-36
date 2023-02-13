@@ -694,6 +694,7 @@ body {
   position: relative;
   display: block;
   padding-left: 36px;
+  cursor: pointer;
 }
 
 .control:hover {
@@ -759,6 +760,117 @@ body {
   line-height: 23px;
 }
 
+.range__inputs {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 288px;
+  margin-bottom: 42px;
+}
+
+.range__input-wrapper {
+  position: relative;
+}
+
+.range__label {
+  position: absolute;
+  font-size: 18px;
+  line-height: 24px;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  color: var(--colorBlackOpacity);
+}
+
+.range__input {
+  max-width: 143px;
+  padding: 12px 20px;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 700;
+  background-color: var(--colorConcrete);
+  border: none;
+}
+
+.range__input::-webkit-outer-spin-button,
+.range__input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+.range__input::placeholder {
+  color: var(--colorBlack);
+}
+
+.range__input:hover {
+  background-color: var(--colorSilver);
+  appearance: none;
+}
+
+.range__input:focus {
+  background-color: var(--colorSilver);
+  outline: 3px solid var(--colorButtonLightFocus);
+}
+
+.range__input:not(:placeholder-shown) {
+  box-shadow: inset 0 0 0 2px var(--colorBlack);
+  outline: none;
+}
+
+.range__input--left {
+  border-radius: 4px 0 0 4px;
+}
+
+.range__input--right {
+  border-radius: 0 4px 4px 0;
+}
+
+.range__scale {
+  position: relative;
+  width: 287px;
+  height: 4px;
+  background-color: var(--colorWhiteOpacity);
+}
+
+.range__bar {
+  position: absolute;
+  width: 226px;
+  height: 4px;
+  left: 0;
+  background-color: var(--colorWhite);
+}
+
+.range__toggle {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: var(--colorWhite);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.range__toggle:hover {
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.25);
+}
+
+.range__toggle:focus {
+  outline: 3px solid var(--colorButtonLightFocus);
+}
+
+.range__toggle:active {
+  outline: 2px solid var(--colorButtonLightFocus);
+}
+
+.range__toggle--min {
+  left: 0;
+}
+
+.range__toggle--max {
+  right: 0;
+}
+
 .form__button__wrapper {
   display: flex;
   flex-direction: column;
@@ -773,7 +885,7 @@ body {
 }
 
 .form__button:not(:last-child) {
-  margin-bottom: 32px;
+  margin-bottom: 34px;
 }
 
 .catalog__wrapper {
