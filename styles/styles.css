@@ -690,6 +690,70 @@ body {
   margin-bottom: 14px;
 }
 
+.control {
+  position: relative;
+  display: block;
+  padding-left: 36px;
+}
+
+.control:hover {
+  opacity: 0.6;
+}
+
+.control:active {
+  opacity: 0.3;
+}
+
+.control__mark {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  left: 0;
+  top: 5px;
+  background-color: var(--colorWhite);
+  border-radius: 4px;
+}
+
+.control__mark--radio {
+  border-radius: 50%;
+}
+
+.control:hover .control__mark {
+  opacity: 0.6;
+}
+
+.control:focus-within .control__mark {
+  outline: 3px solid var(--colorButtonLightFocus);
+}
+
+.control:active .control__mark {
+  opacity: 0.3;
+}
+
+.control__input[type="checkbox"]:checked + .control__mark::after {
+  position: absolute;
+  content: "";
+  width: 13px;
+  height: 11px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-image: url('../image/catalog/checkbox-mark.svg');
+  background-repeat: no-repeat;
+}
+
+.control__input[type="radio"]:checked + .control__mark::after {
+  position: absolute;
+  content: "";
+  width: 10px;
+  height: 10px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--colorSelectActive);
+  border-radius: 50%;
+}
+
 .control__text {
   font-size: 18px;
   line-height: 23px;

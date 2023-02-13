@@ -78,19 +78,22 @@
                 <ul class="form__list">
                   <li class="form__list__item">
                     <label class="control">
-                      <input class="control__input" type="checkbox" name="swimming-pool" checked>
+                      <input class="control__input visually-hidden" type="checkbox" name="swimming-pool" checked>
+                      <span class="control__mark"></span>
                       <span class="control__text">Бассейн</span>
                     </label>
                   </li>
                   <li class="form__list__item">
                     <label class="control">
-                      <input class="control__input" type="checkbox" name="parking" checked>
+                      <input class="control__input visually-hidden" type="checkbox" name="parking" checked>
+                      <span class="control__mark"></span>
                       <span class="control__text">Парковка</span>
                     </label>
                   </li>
                   <li class="form__list__item">
                     <label class="control">
-                      <input class="control__input" type="checkbox" name="wi-fi">
+                      <input class="control__input visually-hidden" type="checkbox" name="wi-fi">
+                      <span class="control__mark"></span>
                       <span class="control__text">Wi-Fi</span>
                     </label>
                   </li>
@@ -101,19 +104,22 @@
                 <ul class="form__list">
                   <li class="form__list__item">
                     <label class="control">
-                      <input class="control__input" type="radio" name="type-of-housing" value="hotel" checked>
+                      <input class="control__input visually-hidden" type="radio" name="type-of-housing" value="hotel" checked>
+                      <span class="control__mark control__mark--radio"></span>
                       <span class="control__text">Гостиница</span>
                     </label>
                   </li>
                   <li class="form__list__item">
                     <label class="control">
-                      <input class="control__input" type="radio" name="type-of-housing" value="motel">
+                      <input class="control__input visually-hidden" type="radio" name="type-of-housing" value="motel">
+                      <span class="control__mark control__mark--radio"></span>
                       <span class="control__text">Мотель</span>
                     </label>
                   </li>
                   <li class="form__list__item">
                     <label class="control">
-                      <input class="control__input" type="radio" name="type-of-housing" value="apartments">
+                      <input class="control__input visually-hidden" type="radio" name="type-of-housing" value="apartments">
+                      <span class="control__mark control__mark--radio"></span>
                       <span class="control__text">Апартаменты</span>
                     </label>
                   </li>
@@ -247,7 +253,7 @@
         <section class="subscription">
             <h2 class="subscription__title">Подпишитесь на рассылку</h2>
             <p class="subscription__description">Только полезная информация и никакого спама, честное бойскаутское!</p>
-            <form class="subscription__form" action="#" method="get">
+            <form class="subscription__form" action="#" method="post">
               <input class="subscription__email" type="email" placeholder="Ваш e-mail">
               <button class="subscription__button button--secondary" type="submit">Подписаться</button>
             </form>
