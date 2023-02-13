@@ -116,7 +116,7 @@
             <h2 class="subscription__title">Подпишитесь на рассылку</h2>
             <p class="subscription__description">Только полезная информация и никакого спама, честное бойскаутское!</p>
             <form class="subscription__form" action="https://echo.htmlacademy.ru/" method="post">
-              <input class="subscription__email" type="email" placeholder="Ваш e-mail">
+              <input class="subscription__email" type="email" name="subscribe-email" placeholder="Ваш e-mail">
               <button class="subscription__button button--secondary" type="submit">Подписаться</button>
             </form>
           </section>
@@ -179,6 +179,34 @@
           </div>
         </div>
       </footer>
+
+      <div class="modal__container modal__container--close">
+        <div class="modal">
+          <button class="modal__close-button" type="button"></button>
+          <section class="modal__content">
+            <h2 class="modal__title">Поиск гостиницы в Седоне</h2>
+            <form class="modal__form" action="https://echo.htmlacademy.ru/" method="post">
+              <p class="modal__form__group">
+                <label class="modal__form__label" for="date-arrive">Дата Заезда:</label>
+                <input class="modal__form__input" id="date-arrive" type="text" name="arrival-date" value="">
+              </p>
+              <p class="modal__form__group">
+                <label class="modal__form__label" for="date-depart">Дата Выезда:</label>
+                <input class="modal__form__input" id="date-depart" type="text" name="depart-date" value="">
+              </p>
+              <p class="modal__form__group">
+                <label class="modal__form__label" for="adults">Взрослые:</label>
+                <input class="modal__form__input" id="adults" type="text" name="amount-adults" value="">
+              </p>
+              <p class="modal__form__group">
+                <label class="modal__form__label" for="children">Дети:</label>
+                <input class="modal__form__input" id="children" type="text" name="amount-children" value="">
+              </p>
+            <button class="modal__form__button button button--secondary" type="submit">Найти</button>
+            </form>
+          </section>
+        </div>
+      </div>
     </div>
   </body>
 </html>
