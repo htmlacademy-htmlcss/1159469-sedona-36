@@ -110,13 +110,13 @@
           <section class="promo">
             <h2 class="promo__title">Заинтересовались?</h2>
             <p class="promo__text">Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения гостиниц в Седоне</p>
-            <a class="promo__link button button--primary" href="catalog.html">Поиск гостиницы в Седоне</a>
+            <button class="promo__button button button--primary">Поиск гостиницы в Седоне</button>
           </section>
           <section class="subscription subscription--background">
             <h2 class="subscription__title">Подпишитесь на рассылку</h2>
             <p class="subscription__description">Только полезная информация и никакого спама, честное бойскаутское!</p>
-            <form class="subscription__form" action="https://echo.htmlacademy.ru/" method="get">
-              <input class="subscription__email" type="email" placeholder="Ваш e-mail">
+            <form class="subscription__form" action="https://echo.htmlacademy.ru/" method="post">
+              <input class="subscription__email" type="email" name="subscribe-email" placeholder="Ваш e-mail">
               <button class="subscription__button button--secondary" type="submit">Подписаться</button>
             </form>
           </section>
@@ -179,6 +179,72 @@
           </div>
         </div>
       </footer>
+
+      <div class="modal__container modal__container--close">
+        <section class="modal">
+          <button class="modal__close-button" type="button">
+            <span class="visually-hidden">Закрыть окно.</span>
+          </button>
+          <h2 class="modal__title">Поиск гостиницы в Седоне</h2>
+          <form class="modal__form" action="https://echo.htmlacademy.ru/" method="post">
+            <div class="modal__form__group modal__form__group--wide">
+              <label class="modal__form__label" for="date-arrive">Дата Заезда:</label>
+              <input class="modal__form__input modal__form__input--date" id="date-arrive" type="text" name="arrival-date" placeholder="27 апреля 2020">
+              <span class="modal__form__message modal__form__message--error">Мы не можем отправить вас в прошлое.</span>
+            </div>
+            <div class="modal__form__group modal__form__group--wide">
+              <label class="modal__form__label" for="date-depart">Дата Выезда:</label>
+              <input class="modal__form__input modal__form__input--date" id="date-depart" type="text" name="depart-date" placeholder="1 сентября 2023">
+              <span class="modal__form__message">На эти даты есть свободные номера. Пока есть.</span>
+            </div>
+            <div class="modal__form__group">
+              <label class="modal__form__label" for="adults">Взрослые:</label>
+              <div class="modal__form__input-wrapper">
+                <button class="input-button input-button--decrease" type="button">
+                  <svg class="input-button__icon" aria-hidden="true" focusable="false" width="14" height="2" viewBox="0 0 14 2" fill="#756157" fill-opacity="0.3" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 0L0 2L14 2V0L0 0Z"/>
+                  </svg>
+                </button>
+                <input class="modal__form__input modal__form__input--amount" id="adults" type="number" name="amount-adults" placeholder="2">
+                <button class="input-button input-button--increase" type="button">
+                  <svg class="input-button__icon" aria-hidden="true" focusable="false" width="14" height="14" viewBox="0 0 14 14" fill="#756157" fill-opacity="0.3" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M14 6H8V0H6V6H0V8H6V14H8V8H14V6Z"/>
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div class="modal__form__group">
+              <div class="modal__form__label-wrapper">
+                <label class="modal__form__label" for="children">Дети:</label>
+                <div class="modal__form__tooltip tooltip">
+                  <button class="tooltip__button" type="button">
+                    <svg class="tooltip__icon" aria-hidden="true" focusable="false" width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="13" cy="13" r="13" fill="#83B3D3"/>
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M12 7H14V9H12V7ZM14 19H12V10H14V19Z" fill="white"/>
+                    </svg>
+                  </button>
+                  <div class="tooltip__text">Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</div>
+                </div>
+              </div>
+              <div class="modal__form__input-wrapper">
+                <button class="input-button input-button--decrease" type="button">
+                  <svg class="input-button__icon" aria-hidden="true" focusable="false" width="14" height="2" viewBox="0 0 14 2" fill="#756157" fill-opacity="0.3" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 0L0 2L14 2V0L0 0Z"/>
+                  </svg>
+                </button>
+                <input class="modal__form__input modal__form__input--amount" id="children" type="number" name="amount-children" placeholder="2">
+                <button class="input-button input-button--increase" type="button">
+                  <svg class="input-button__icon" aria-hidden="true" focusable="false" width="14" height="14" viewBox="0 0 14 14" fill="#756157" fill-opacity="0.3" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M14 6H8V0H6V6H0V8H6V14H8V8H14V6Z"/>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          <button class="modal__form__button button button--secondary" type="submit">Найти</button>
+          </form>
+        </section>
+      </div>
     </div>
+    <script type="module" src="scripts/index.js"></script>
   </body>
 </html>
