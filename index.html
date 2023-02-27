@@ -71,15 +71,15 @@
               </li>
               <li class="features__item features__item--text">
                 <h3 class="features__title features__title--secondary">Небольшая площадь</h3>
-                <p class="features__description">Все достопримечательности находятся очень близко</p>
+                <p class="features__description features__description--secondary">Все достопримечательности находятся очень близко</p>
               </li>
               <li class="features__item features__item--text">
                 <h3 class="features__title features__title--secondary">Красивая дорога</h3>
-                <p class="features__description">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+                <p class="features__description features__description--secondary">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
               </li>
               <li class="features__item features__item--text">
                 <h3 class="features__title features__title--secondary">Мало туристов</h3>
-                <p class="features__description">Большинство едет в Гранд Каньон и толпится там</p>
+                <p class="features__description features__description--secondary">Большинство едет в Гранд Каньон и толпится там</p>
               </li>
               <li class="features__item features__item--picture">
                 <img class="features__image" src="image/index/features-bridge.jpg" width="800" height="385" alt="Мост дьявола.">
@@ -111,13 +111,13 @@
           <section class="promo">
             <h2 class="promo__title">Заинтересовались?</h2>
             <p class="promo__text">Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения гостиниц в Седоне</p>
-            <button class="promo__button button button--primary" type="button">Поиск гостиницы в Седоне</button>
+            <a class="promo__button button button--primary" href="#">Поиск гостиницы в Седоне</a>
           </section>
           <section class="subscription subscription--background">
             <h2 class="subscription__title">Подпишитесь на рассылку</h2>
-            <p class="subscription__description">Только полезная информация и никакого спама, честное бойскаутское!</p>
+            <p class="subscription__description subscription__description--background">Только полезная информация и никакого спама, честное бойскаутское!</p>
             <form class="subscription__form" action="https://echo.htmlacademy.ru/" method="post">
-              <input class="subscription__email" type="email" name="subscribe-email" placeholder="Ваш e-mail">
+              <input class="subscription__email" type="email" name="subscribe-email" placeholder="Ваш e-mail" required>
               <button class="subscription__button button--secondary" type="submit">Подписаться</button>
             </form>
           </section>
@@ -190,24 +190,26 @@
           <form class="modal__form" action="https://echo.htmlacademy.ru/" method="post">
             <div class="modal__form__group modal__form__group--wide">
               <label class="modal__form__label" for="date-arrive">Дата Заезда:</label>
-              <input class="modal__form__input modal__form__input--date" id="date-arrive" type="text" name="arrival-date" placeholder="27 апреля 2020">
+              <input class="modal__form__input modal__form__input--date" id="date-arrive" type="text" name="arrival-date" placeholder="27 апреля 2020" required>
               <span class="modal__form__message modal__form__message--error">Мы не можем отправить вас в прошлое.</span>
             </div>
             <div class="modal__form__group modal__form__group--wide">
               <label class="modal__form__label" for="date-depart">Дата Выезда:</label>
-              <input class="modal__form__input modal__form__input--date" id="date-depart" type="text" name="depart-date" placeholder="1 сентября 2023">
+              <input class="modal__form__input modal__form__input--date" id="date-depart" type="text" name="depart-date" placeholder="1 сентября 2023" required>
               <span class="modal__form__message">На эти даты есть свободные номера. Пока есть.</span>
             </div>
             <div class="modal__form__group">
               <label class="modal__form__label" for="adults">Взрослые:</label>
               <div class="modal__form__input-wrapper">
                 <button class="input-button input-button--decrease" type="button">
+                  <span class="visually-hidden">Уменьшить количество.</span>
                   <svg class="input-button__icon" aria-hidden="true" focusable="false" width="14" height="2" viewBox="0 0 14 2" fill="#756157" fill-opacity="0.3" xmlns="http://www.w3.org/2000/svg">
                     <path d="M0 0L0 2L14 2V0L0 0Z"/>
                   </svg>
                 </button>
-                <input class="modal__form__input modal__form__input--amount" id="adults" type="number" name="amount-adults" placeholder="2">
+                <input class="modal__form__input modal__form__input--amount" id="adults" type="number" name="amount-adults" placeholder="2" required>
                 <button class="input-button input-button--increase" type="button">
+                  <span class="visually-hidden">Увеличить количество.</span>
                   <svg class="input-button__icon" aria-hidden="true" focusable="false" width="14" height="14" viewBox="0 0 14 14" fill="#756157" fill-opacity="0.3" xmlns="http://www.w3.org/2000/svg">
                     <path d="M14 6H8V0H6V6H0V8H6V14H8V8H14V6Z"/>
                   </svg>
@@ -219,6 +221,7 @@
                 <label class="modal__form__label" for="children">Дети:</label>
                 <div class="modal__form__tooltip tooltip">
                   <button class="tooltip__button" type="button">
+                    <span class="visually-hidden">Посмотреть дополнительную информацию.</span>
                     <svg class="tooltip__icon" aria-hidden="true" focusable="false" width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <circle cx="13" cy="13" r="13" fill="#83B3D3"/>
                       <path fill-rule="evenodd" clip-rule="evenodd" d="M12 7H14V9H12V7ZM14 19H12V10H14V19Z" fill="white"/>
@@ -229,12 +232,14 @@
               </div>
               <div class="modal__form__input-wrapper">
                 <button class="input-button input-button--decrease" type="button">
+                  <span class="visually-hidden">Уменьшить количество.</span>
                   <svg class="input-button__icon" aria-hidden="true" focusable="false" width="14" height="2" viewBox="0 0 14 2" fill="#756157" fill-opacity="0.3" xmlns="http://www.w3.org/2000/svg">
                     <path d="M0 0L0 2L14 2V0L0 0Z"/>
                   </svg>
                 </button>
-                <input class="modal__form__input modal__form__input--amount" id="children" type="number" name="amount-children" placeholder="2">
+                <input class="modal__form__input modal__form__input--amount" id="children" type="number" name="amount-children" placeholder="2" required>
                 <button class="input-button input-button--increase" type="button">
+                  <span class="visually-hidden">Увеличить количество.</span>
                   <svg class="input-button__icon" aria-hidden="true" focusable="false" width="14" height="14" viewBox="0 0 14 14" fill="#756157" fill-opacity="0.3" xmlns="http://www.w3.org/2000/svg">
                     <path d="M14 6H8V0H6V6H0V8H6V14H8V8H14V6Z"/>
                   </svg>
@@ -246,6 +251,6 @@
         </section>
       </div>
     </div>
-    <script type="module" src="scripts/index.js"></script>
+    <script type="module" src="scripts/modal.js"></script>
   </body>
 </html>
