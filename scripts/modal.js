@@ -4,7 +4,6 @@ const modalElement = document.querySelector('.modal__container')
 
 const showModal = () => {
   modalElement.classList.remove('modal__container--close')
-  console.log("подписка")
 }
 
 const hideModal = () => {
@@ -17,10 +16,6 @@ const hideModalByEsc = (evt) => {
   }
 }
 
-const setEventListeners = () => {
-  openModalButton.addEventListener('click', showModal)
-  closeModalButton.addEventListener('click', hideModal)
-  document.addEventListener('keydown', hideModalByEsc)
-}
-
-export default setEventListeners;
+openModalButton.addEventListener('click', showModal)
+closeModalButton.addEventListener('click', hideModal)
+document.addEventListener('keydown', hideModalByEsc)

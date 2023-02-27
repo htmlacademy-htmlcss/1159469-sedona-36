@@ -132,11 +132,11 @@
                   <div class="range__inputs">
                     <div class="range__input-wrapper">
                       <label class="range__label" for="min-price">от</label>
-                      <input class="range__input range__input--left" id="min-price" type="number" name="min-price" placeholder="0">
+                      <input class="range__input range__input--left" id="min-price" type="number" name="min-price" placeholder="0" required>
                     </div>
                     <div class="range__input-wrapper">
                       <label class="range__label" for="max-price">до</label>
-                      <input class="range__input range__input--right" id="max-price" type="number" name="max-price" placeholder="9000">
+                      <input class="range__input range__input--right" id="max-price" type="number" name="max-price" placeholder="9000" required>
                     </div>
                   </div>
                   <div class="range__scale">
@@ -276,7 +276,7 @@
             <h2 class="subscription__title">Подпишитесь на рассылку</h2>
             <p class="subscription__description">Только полезная информация и никакого спама, честное бойскаутское!</p>
             <form class="subscription__form" action="https://echo.htmlacademy.ru/" method="post">
-              <input class="subscription__email" type="email" name="subscribe-email" placeholder="Ваш e-mail">
+              <input class="subscription__email" type="email" name="subscribe-email" placeholder="Ваш e-mail" required>
               <button class="subscription__button button--secondary" type="submit">Подписаться</button>
             </form>
         </section>
